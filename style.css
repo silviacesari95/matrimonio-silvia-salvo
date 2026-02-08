@@ -275,47 +275,21 @@ a {
     text-align: center;
 }
 
-.rsvp-form {
-    max-width: 600px;
+.rsvp-container {
+    max-width: 800px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
+    background: var(--white);
     padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: var(--font-body);
-    outline: none;
-    transition: var(--transition);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-}
-
-.submit-btn {
-    padding: 1rem 3rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+iframe {
+    width: 100%;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: var(--transition);
-    align-self: center;
-}
-
-.submit-btn:hover {
-    background-color: #c08e5e;
+    min-height: 800px;
+    /* Ensure enough height for the form */
 }
 
 /* Registry Section */

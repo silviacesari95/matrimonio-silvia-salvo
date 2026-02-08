@@ -90,28 +90,22 @@
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">R.S.V.P.</h2>
             <p>Saremmo felici di averti con noi! Per favore conferma la tua presenza entro il 1 Settembre 2026.</p>
-            <form id="rsvp-form" class="rsvp-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Nome e Cognome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <select required>
-                        <option value="" disabled selected>Parteciperai?</option>
-                        <option value="si">Sì, con gioia!</option>
-                        <option value="no">Purtroppo non potrò esserci</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="number" placeholder="Numero di ospiti (incluso te)" min="1">
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Eventuali allergie o intolleranze alimentari"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Invia Conferma</button>
-            </form>
+            <div class="rsvp-container">
+                <!-- 
+                    ISTRUZIONI PER INSERIRE IL TUO GOOGLE FORM:
+                    1. Crea il tuo modulo su forms.google.com
+                    2. Clicca su "Invia" in alto a destra
+                    3. Vai sulla scheda con il simbolo < > (Incorpora HTML)
+                    4. Copia il link che trovi dopo 'src=' (es. https://docs.google.com/forms/d/e/.../viewform?embedded=true)
+                    5. Incolla quel link al posto di quello qui sotto nel tag iframe src="..."
+                -->
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfe31-8JpIKsSCKf0r71P1P-XWT6xVwiRuFeGG7tPukdfnbwA/viewform?embedded=true"
+                    width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Modulo RSVP Matrimonio">
+                    Caricamento…
+                </iframe>
+            </div>
         </div>
     </section>
 
