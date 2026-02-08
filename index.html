@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvia & Salvo | 11 Ottobre 2026</title>
+    <meta name="description" content="Sito ufficiale del matrimonio di Silvia e Salvo. Dettagli, location e RSVP.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">S & S</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#details">Dettagli</a></li>
+            <li><a href="#travel">Come Raggiungerci</a></li>
+            <li><a href="#accommodation">Dove Alloggiare</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#registry">Lista Nozze</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <p class="subtitle">Siamo felici di annunciare il nostro matrimonio</p>
+            <h1 class="title">Silvia & Salvo</h1>
+            <p class="date">11 Ottobre 2026</p>
+            <p class="location-hero">Lecce, Puglia</p>
+            <div id="countdown" class="countdown">
+                <!-- Countdown injected via JS -->
+            </div>
+            <a href="#rsvp" class="cta-button">Conferma Presenza</a>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="section details">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">I Dettagli</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-calendar-alt icon"></i>
+                    <h3>Quando</h3>
+                    <p>Domenica, 11 Ottobre 2026</p>
+                    <p>Ore 11:00 (Orario da confermare)</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <h3>Dove</h3>
+                    <p><strong>Torre del Parco</strong></p>
+                    <p>Viale Torre del Parco, 1</p>
+                    <p>73100 Lecce LE</p>
+                    <a href="https://maps.google.com/?q=Torre+del+Parco+Lecce" target="_blank" class="map-link">Vedi
+                        Mappa</a>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-glass-cheers icon"></i>
+                    <h3>Ricevimento</h3>
+                    <p>A seguire, nella stessa location.</p>
+                    <p>Festeggeremo insieme fino a tardi!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="section rsvp">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">R.S.V.P.</h2>
+            <p>Saremmo felici di averti con noi! Per favore conferma la tua presenza entro il 1 Settembre 2026.</p>
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nome e Cognome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Parteciperai?</option>
+                        <option value="si">Sì, con gioia!</option>
+                        <option value="no">Purtroppo non potrò esserci</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Numero di ospiti (incluso te)" min="1">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Eventuali allergie o intolleranze alimentari"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Invia Conferma</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Registry Section -->
+    <section id="registry" class="section registry">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">Lista Nozze</h2>
+            <p>Il regalo più grande è la vostra presenza. Tuttavia, se desiderate farci un dono, ecco alcune opzioni:
+            </p>
+            <div class="registry-options">
+                <div class="registry-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>Viaggio di Nozze</h3>
+                    <p>Aiutateci a realizzare il nostro viaggio da sogno!</p>
+                    <p class="iban">IBAN: IT00 X000 0000 0000 0000 0000 00</p>
+                </div>
+                <!-- Additional options can go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section id="travel" class="section travel">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">Come Raggiungerci</h2>
+            <div class="travel-grid">
+                <div class="travel-card">
+                    <i class="fas fa-plane-arrival icon"></i>
+                    <h3>In Aereo</h3>
+                    <p><strong>Aeroporto di Brindisi (BDS)</strong><br>A circa 40km da Lecce. Collegato alla città
+                        tramite bus navetta o taxi.</p>
+                    <p><strong>Aeroporto di Bari (BRI)</strong><br>A circa 150km. Treni diretti dalla stazione di Bari
+                        Centrale.</p>
+                </div>
+                <div class="travel-card">
+                    <i class="fas fa-train icon"></i>
+                    <h3>In Treno</h3>
+                    <p>La stazione di <strong>Lecce</strong> è ben collegata con le principali città italiane tramite
+                        Frecce e Intercity.</p>
+                </div>
+                <div class="travel-card">
+                    <i class="fas fa-car icon"></i>
+                    <h3>Trasporti Locali</h3>
+                    <p>Per muoversi a Lecce e dintorni consigliamo il noleggio auto o l'uso di taxi locali.</p>
+                    <p><em>Taxi Lecce: +39 0832 123456</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section id="accommodation" class="section accommodation">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">Dove Alloggiare</h2>
+            <div class="accommodation-content">
+                <p class="accommodation-note">
+                    <i class="fas fa-heart"></i>
+                    Saremo felici di ospitarvi! Il pernottamento per la notte dell'evento sarà a nostra cura presso le
+                    seguenti strutture:
+                </p>
+                <div class="hotel-list">
+                    <div class="hotel-card">
+                        <h3>Grand Hotel di Lecce</h3>
+                        <p>Viale Oronzo Quarta, 28</p>
+                        <a href="#" target="_blank">Vedi Sito</a>
+                    </div>
+                    <div class="hotel-card">
+                        <h3>Patria Palace Hotel</h3>
+                        <p>Piazzetta Gabriele Riccardi, 13</p>
+                        <a href="#" target="_blank">Vedi Sito</a>
+                    </div>
+                    <div class="hotel-card">
+                        <h3>B&B Centro Storico</h3>
+                        <p>Varie opzioni nel cuore di Lecce</p>
+                        <a href="https://www.booking.com/city/it/lecce.it.html" target="_blank">Cerca su Booking</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Silvia & Salvo. Con amore.</p>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
