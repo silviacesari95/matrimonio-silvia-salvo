@@ -188,7 +188,7 @@ a {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
     color: var(--primary-color);
     position: relative;
@@ -350,6 +350,19 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
 }
+
+.travel-grid.custom-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.travel-card.featured {
+    grid-row: 1 / 4;
+}
+
 
 /* Shuttle Schedule Styling */
 .shuttle-schedule {
@@ -565,5 +578,14 @@ footer {
 
     .story-content {
         flex-direction: column;
+    }
+
+    .travel-grid.custom-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .travel-card.featured {
+        grid-row: auto;
     }
 }
