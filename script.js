@@ -39,7 +39,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Countdown Timer
-const weddingDate = new Date('Oct 11, 2026 11:00:00').getTime();
+// Impostato sull'orario di Roma (UTC+2 in quel periodo)
+const weddingDate = new Date('2026-10-11T11:00:00+02:00').getTime();
 
 const countdown = setInterval(() => {
     const now = new Date().getTime();
@@ -123,3 +124,19 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+// Copia IBAN function
+const copyBtn = document.getElementById('copy-iban');
+if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+        const ibanText = document.getElementById('iban-text').innerText;
+        navigator.clipboard.writeText(ibanText).then(() => {
+            const copyMsg = document.getElementById('copy-msg');
+            copyMsg.style.display = 'inline';
+            setTimeout(() => {
+                copyMsg.style.display = 'none';
+            }, 2000);
+        }).catch(err => {
+            console.error('Errore durante la copia: ', err);
+        });
+    });
+}

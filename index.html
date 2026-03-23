@@ -69,7 +69,7 @@
                     <i class="fas fa-calendar-alt icon"></i>
                     <h3>Quando</h3>
                     <p>Domenica, 11 Ottobre 2026</p>
-                    <p>Ore 11:00 (Orario da confermare)</p>
+                    <p>Ore 11:00</p>
                 </div>
                 <div class="detail-card">
                     <i class="fas fa-map-marker-alt icon"></i>
@@ -103,7 +103,7 @@
                     <h3>In Aereo</h3>
                     <p><strong>Aeroporto di Brindisi (BDS)</strong><br>L'aeroporto del Salento dista circa 40km da
                         Lecce. Da qui puoi raggiungere Lecce in taxi o con l'autobus (al costo di 7€). La fermata
-                        si trova uscendo dal lato arrivi sulla destra. Se possibile, verremo a prenderti noi.</p>
+                        si trova uscendo dal lato arrivi sulla destra.</p>
                     <a href="navetta-brindisi.png" target="_blank" class="pdf-link"
                         style="display: block; margin-bottom: 1rem;">📷 Vedi foto della fermata</a>
 
@@ -113,7 +113,7 @@
 
                     <p style="margin-top: 1.5rem;"><strong>Aeroporto di Bari (BRI)</strong><br>A circa 150km.
                         Dall'aeroporto di Bari puoi raggiungere la stazione di Bari Centrale con il treno (€ 5.30)
-                        o con un taxi (circa 25€) e da lì prendere un treno per Lecce (il biglietto costa 13€ e il
+                        o con un taxi (circa 25€) e da lì prendere un treno per Lecce (il biglietto costa 13€ ed il
                         viaggio dura 1h 40m).</p>
                     <a href="https://www.ferrotramviaria.it/web/guest/home" target="_blank" class="pdf-link">Orari Treno
                         Aeroporto - Bari Centrale</a>
@@ -181,8 +181,28 @@
     <section id="registry" class="section registry">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">Lista Nozze</h2>
-            <p>Il regalo più grande è la tua presenza. Tuttavia, se desideri farci un dono, è gradito regalo in
-                busta che contribuirà alla ristrutturazione della nostra nuova casa.</p>
+            <p>Dopo il 'Sì', la nostra avventura continuerà tra mura da dipingere e stanze da arredare. Se volete farci
+                un regalo, un contributo per rendere speciale la nostra nuova casa sarà il modo più bello per sentirvi
+                sempre vicini a noi.</p>
+
+            <div class="iban-container"
+                style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; border: 1px dashed rgba(0, 0, 0, 0.2); max-width: 500px; margin-left: auto; margin-right: auto;">
+                <p style="margin-bottom: 0.5rem;"><i class="fas fa-university"></i> <strong>Bonifico Bancario</strong>
+                </p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0.5rem 0;">
+                    <p style="font-family: inherit; font-size: 1.1rem; letter-spacing: 1px; margin: 0;">
+                        <strong>IBAN:</strong> <span id="iban-text">IT96S0339512900052907442880</span>
+                    </p>
+                    <button id="copy-iban" title="Copia IBAN"
+                        style="background: none; border: none; cursor: pointer; font-size: 1.2rem; color: inherit; opacity: 0.7; transition: opacity 0.3s;"
+                        onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                    <span id="copy-msg"
+                        style="display: none; font-size: 0.8rem; font-weight: bold; margin-left: 5px;">Copiato!</span>
+                </div>
+                <p style="font-size: 0.9rem;">Intestato a Cesari Silvia e Salvatore Giuseppe Bellino</p>
+            </div>
         </div>
     </section>
 
