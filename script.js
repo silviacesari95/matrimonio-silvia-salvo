@@ -140,3 +140,56 @@ if (copyBtn) {
         });
     });
 }
+
+// Initialize Map (Leaflet)
+const mapElement = document.getElementById('locations-map');
+if (mapElement) {
+    // Coordinate centrali per inquadrare tutte le location
+    const map = L.map('locations-map').setView([40.350, 18.175], 15);
+
+    // Google Maps Tiles
+    L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        attribution: '&copy; Google Maps',
+        maxZoom: 20
+    }).addTo(map);
+
+    // Custom icon per il ristornate (sposi fianco a fianco senza cerchio)
+    const restaurantIcon = L.divIcon({
+        html: '<div style="font-size: 38px; display: flex; align-items: center; justify-content: center; white-space: nowrap; filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5)); letter-spacing: -12px;">👰🤵</div>',
+        className: '',
+        iconSize: [60, 40],
+        iconAnchor: [30, 35],
+        popupAnchor: [0, -35]
+    });
+
+    // Custom icon per gli alloggi (letto)
+    const hotelIcon = L.divIcon({
+        html: '<div style="font-size: 20px; background: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border: 2px solid #555;">🛏️</div>',
+        className: '',
+        iconSize: [35, 35],
+        iconAnchor: [17, 17],
+        popupAnchor: [0, -17]
+    });
+
+    const locations = [
+        { name: "🥂 Torre del Parco (Cerimonia e Ricevimento)", coords: [40.347208, 18.179488], isRestaurant: true },
+        { name: "Lo Studio di Viale Lo Re", coords: [40.349940, 18.173587], isRestaurant: false },
+        { name: "LecceMia B&B", coords: [40.349303, 18.177974], isRestaurant: false },
+        { name: "Suite San Biagio", coords: [40.348753, 18.175047], isRestaurant: false },
+        { name: "Daf La Casetta", coords: [40.348006, 18.178791], isRestaurant: false },
+        { name: "Fram Luxury Apartment", coords: [40.349940, 18.181735], isRestaurant: false }
+    ];
+
+    locations.forEach(loc => {
+        const marker = L.marker(loc.coords, { icon: loc.isRestaurant ? restaurantIcon : hotelIcon }).addTo(map);
+        marker.bindPopup(`<strong>${loc.name}</strong>`);
+        if (loc.isRestaurant) {
+            marker.openPopup();
+        }
+    });
+
+    // Aggiungi un po' di padding per assicurarsi che i marker siano visibili
+    const group = new L.featureGroup(locations.map(loc => L.marker(loc.coords)));
+    map.fitBounds(group.getBounds(), { padding: [30, 30] });
+}
+

@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <!-- Custom CSS with Cache Buster -->
     <script>
         document.write('<link rel="stylesheet" href="style.css?v=' + Date.now() + '">');
@@ -160,19 +164,50 @@
                 <p class="accommodation-note">
                     <i class="fas fa-heart"></i>
                     Saremo felici di ospitarti! Il pernottamento per la notte dell'evento e quella precedente sarà a
-                    nostra cura presso delle strutture vicine al luogo della cerimonia. Ti invieremo le informazioni
-                    in seguito.
+                    nostra cura presso le seguenti strutture (in aggiornamento).
                 </p>
-                <!-- <div class="hotel-list">
-                    <div class="hotel-card">
-                        <h3>Dimore centro Lecce Affittacamere B&B</h3>
-                        <p>Via Francesco Casotti, 17</p>
-                    </div>
-                    <div class="hotel-card">
-                        <h3>LoStudio di Viale Lo Re - Camere & Caffè</h3>
-                        <p>Viale Francesco Lo Re, 38</p>
-                    </div>
-                </div> -->
+                <div class="hotel-list">
+                    <a href="https://www.camereecaffe.com/lo-studio-di-viale-lo-re/" target="_blank" class="hotel-card">
+                        <i class="fas fa-bed icon"
+                            style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Lo Studio di Viale Lo Re</h3>
+                        <p class="hotel-address"><i class="fas fa-map-marker-alt"></i> Viale Francesco Lo Re, 38, Lecce
+                        </p>
+                    </a>
+                    <a href="https://leccemia-bnb.it/" target="_blank" class="hotel-card">
+                        <i class="fas fa-bed icon"
+                            style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>LecceMia B&B</h3>
+                        <p class="hotel-address"><i class="fas fa-map-marker-alt"></i> Via G. A. Orsini del Balzo, 44,
+                            Lecce</p>
+                    </a>
+                    <a href="https://suitesanbiagio.com/" target="_blank" class="hotel-card">
+                        <i class="fas fa-bed icon"
+                            style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Suite San Biagio</h3>
+                        <p class="hotel-address"><i class="fas fa-map-marker-alt"></i> Viale Don Giovanni Minzoni, 7/e,
+                            Lecce</p>
+                    </a>
+                    <a href="https://villa-la-casetta.lecceitalyhotels.com/it/" target="_blank" class="hotel-card">
+                        <i class="fas fa-bed icon"
+                            style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Daf La Casetta</h3>
+                        <p class="hotel-address"><i class="fas fa-map-marker-alt"></i> Via G. A. Orsini del Balzo, 59,
+                            Lecce</p>
+                    </a>
+                    <a href="https://apt-fram-luxury-via-leonardo-da-vinci.lecceitalyhotels.com/it/" target="_blank"
+                        class="hotel-card">
+                        <i class="fas fa-bed icon"
+                            style="font-size: 2.2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                        <h3>Fram Luxury Apartment</h3>
+                        <p class="hotel-address"><i class="fas fa-map-marker-alt"></i> Via Leonardo Da Vinci, 22, Lecce
+                        </p>
+                    </a>
+                </div>
+                <!-- Interactive Map Container -->
+                <div id="locations-map"
+                    style="height: 450px; width: 100%; max-width: 1000px; margin: 3rem auto 0; border-radius: 8px; border: 1px solid #eee; z-index: 1; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                </div>
             </div>
         </div>
     </section>
@@ -235,6 +270,10 @@
         <p>&copy; 2026 Salvo & Silvia. Con amore.</p>
     </footer>
 
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS with Cache Buster -->

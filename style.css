@@ -501,38 +501,48 @@ footer {
     gap: 2rem;
 }
 
+a.hotel-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .hotel-card {
-    background: #fdfcfb;
-    border: 1px solid #eee;
-    padding: 1.5rem;
+    background: var(--white);
+    padding: 2rem;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 300px;
     transition: var(--transition);
+    text-align: center;
 }
 
 .hotel-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .hotel-card h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
+    transition: var(--transition);
 }
 
-.hotel-card a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    border-radius: 4px;
-    font-size: 0.9rem;
+.hotel-card:hover h3 {
+    color: var(--accent-color);
 }
 
-.hotel-card a:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
+.hotel-address {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.hotel-address i {
+    margin-right: 5px;
+    color: var(--accent-color);
 }
 
 /* Mobile Responsive */
