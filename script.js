@@ -177,7 +177,8 @@ if (mapElement) {
         { name: "LecceMia B&B", coords: [40.349303, 18.177974], isRestaurant: false },
         { name: "Suite San Biagio", coords: [40.348753, 18.175047], isRestaurant: false },
         { name: "Daf La Casetta", coords: [40.348006, 18.178791], isRestaurant: false },
-        { name: "Fram Luxury Apartment", coords: [40.349940, 18.181735], isRestaurant: false }
+        { name: "Fram Luxury Apartment", coords: [40.349940, 18.181735], isRestaurant: false },
+        { name: "Mamma Sisi B&B", coords: [40.353004, 18.173583], isRestaurant: false }
     ];
 
     locations.forEach(loc => {
